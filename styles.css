@@ -1,0 +1,369 @@
+/*SCROLLBAR*/
+html {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+  scroll-padding-top: 10%;
+  scroll-behaviour: smooth;
+}
+html::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+/*COLORS*/
+:root {
+  /*--white: #f2e8cf; OR #f9faf4;*/
+  --white: #f2e8cf;
+  --one: #c8553d;
+  --two: #93b7be;
+  --three: #588b8b;
+  --four: #f28f3b;
+  --five: #404464;
+  --six: #ffd5c2;
+  --black: #2b2129;
+}
+
+/*FONTS*/
+@font-face {
+  font-family: HK Grotesk;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
+    format("opentype");
+}
+
+body {
+  background-color: var(--white);
+  color: var(--black);
+  font-family: HK Grotesk, sans-serif;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    height: 70vh;
+    min-height: 600px;
+    gap: 5%;
+    background-image: url("https://www.creativefabrica.com/wp-content/uploads/2021/01/29/Seamless-repeat-pattern-abstract-flowers-Graphics-8167720-1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header .bg {
+  height: 70vh;
+  width: 100%;
+  /*height: 50vh;
+  width: 90%;
+  margin-left: 6%;
+  border-radius: 60px;*/
+  z-index: 10;
+  position: absolute;
+  background-color: var(--white);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-size: 4vw;
+  font-weight: bold;
+}
+
+header p {
+  font-size: 1vw;
+}
+
+header .title {
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 10%;
+  width: 35%;
+  min-width: 350px;
+}
+
+header img {
+  z-index: 20;
+  width: 40%;
+  min-width: 350px;
+  margin-right: 10%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+@media (width < 1500px) {
+  header p {
+    font-size: 15px;
+  }
+}
+
+@media (width < 1000px) {
+  header {
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: 675px;
+    border: 2px solid black;
+  }
+  header .bg {
+    /*height: 550px;
+    width: 82%;
+    margin-left: 0;*/
+    height: 675px;
+    width: 100%;
+  }
+  header hr {
+    width: inherit;
+  }
+  header h1 {
+    font-size: 40px;
+  }
+  header p {
+    width: 80%;
+  }
+  header .title {
+    align-items: center;
+    margin-left: 0;
+    width: 70%;
+    text-align: center;
+  }
+
+  header img {
+    margin-right: 0;
+    width: 70%;
+    height: 250px;
+  }
+}
+
+#colors {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#colors h2 {
+  font-size: 2vw;
+}
+
+#colors .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+}
+
+#colors .color {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+
+#colors .color h2 {
+  z-index: 20;
+  font-weight: bold;
+}
+
+.big {
+  width: 55%;
+  min-width: 363px;
+  transition: width 1s;
+}
+
+.small {
+  width: 45%;
+  min-width: 297px;
+  transition: width 1s;
+}
+
+.big-cover, .small-cover {
+  background-color: black;
+  height: 300px;
+  position: absolute;
+  z-index: 10;
+  opacity: 0.75;
+  transition: opacity 1s, width 1s;
+  width: 100%;
+}
+
+.one {
+  background-image: url("https://images.unsplash.com/photo-1628717341663-0007b0ee2597?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+.one-cover {
+  background-color: var(--one);
+}
+.two {
+  background-image: url("https://images.pexels.com/photos/6994945/pexels-photo-6994945.jpeg?_gl=1*1mvpati*_ga*MTc5OTI1NTg3Mi4xNzQxODgxOTU0*_ga_8JE65Q40S6*czE3NTQwNjg0MzIkbzMkZzEkdDE3NTQwNjg1MTAkajUyJGwwJGgw");
+}
+.two-cover {
+  background-color: var(--two);
+}
+.three {
+  background-image: url("https://images.unsplash.com/photo-1651246021077-3407cb30ea7d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+.three-cover {
+  background-color: var(--three);
+}
+.four {
+  background-image: url("https://images.unsplash.com/photo-1595278069441-2cf29f8005a4?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+.four-cover {
+  background-color: var(--four);
+}
+.five {
+  background-image: url("https://plus.unsplash.com/premium_photo-1706061121405-db342bc70944?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c2Nob29sJTIwY2x1YnN8ZW58MHx8MHx8fDA%3D");
+}
+.five-cover {
+  background-color: var(--five);
+}
+.six {
+  background-image: url("https://images.unsplash.com/photo-1643145024741-2aef480c2cbd?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+.six-cover {
+  background-color: var(--six);
+}
+
+@media (width < 1500px) {
+  #colors h2 {
+    font-size: 30px;
+  }
+}
+
+@media (width < 1000px) {
+  #colors .row {
+    height: 500px;
+  }
+  #colors .color, .big-cover, .small-cover {
+    height: 250px;
+  }
+  .big, .small, .big-cover, .small-cover {
+    width: 100%;
+  }
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  text-align: center;
+}
+
+.quote h3 {
+  font-size: 1.8vw;
+}
+
+.quote p {
+  font-size: 1vw;
+  font-style: italic;
+}
+
+@media (width < 1500px) {
+  .quote h3 {
+    font-size: 30px;
+  }
+}
+
+@media (width < 1500px) {
+  .quote p {
+    font-size: 15px;
+  }
+}
+
+
+footer {
+  background-color: var(--black);
+  height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  width: 100%;
+  padding: 30px;
+  color: var(--white);
+}
+
+.contact-us {
+  width: 40%;
+}
+
+
+.contact-us h2 {
+  font-size: 3.5vw;
+  text-align: right;
+}
+
+.contact-us hr {
+  height: 5px;
+}
+
+
+@media (width < 1000px) {
+  .contact-us h2 {
+    font-size: 35px;
+  }
+}
+
+footer form {
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2%;
+}
+
+
+#name, #email {
+  width: 49%;
+  height: 2vw;
+}
+
+#message {
+  width: 100%;
+  margin-top: 2%;
+}
+
+#name::placeholder, #email::placeholder, #message::placeholder, #message {
+  padding-top: 5px;
+  padding-left: 3px;
+}
+
+
+@media (width < 1500px){
+  #name, #email, #message {
+    height: 30px;
+  }
+  footer {
+    height: 400px;
+  }
+}
+
+@media (width < 1000px) {
+  .contact-us h2 {
+    font-size: 35px;
+  }
+  .contact-us {
+    width: 80%;
+    margin-bottom: -75px;
+  }
+  footer form {
+    width: 80%;
+  }
+  footer {
+    height: 300px;
+  }
+}
