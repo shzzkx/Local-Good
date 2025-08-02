@@ -43,10 +43,10 @@ header {
     height: 70vh;
     min-height: 600px;
     gap: 5%;
-    background-image: url("https://www.creativefabrica.com/wp-content/uploads/2021/01/29/Seamless-repeat-pattern-abstract-flowers-Graphics-8167720-1.jpg");
+    /*background-image: url("https://www.creativefabrica.com/wp-content/uploads/2021/01/29/Seamless-repeat-pattern-abstract-flowers-Graphics-8167720-1.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover;*/
 }
 
 header .bg {
@@ -59,7 +59,7 @@ header .bg {
   z-index: 10;
   position: absolute;
   background-color: var(--white);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
 }
 
 header h1 {
